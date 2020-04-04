@@ -4,6 +4,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
+/*@Primary is just same as @Qualifier.
+ * resolve the abmbiguity problem when multiple bean are there of same type
+ * @Qualifier is used at the time of @Autowiring 
+ * and @Primary annotation used in case if bean initialization. Its check the bean 
+ * and get it the load the bean who is primary
+ * */
+
 @Configuration
 public class SpringConfig {
 
