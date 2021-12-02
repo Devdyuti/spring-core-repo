@@ -3,6 +3,7 @@ package org.spring.core.practice;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
 
 /*@Primary is just same as @Qualifier.
  * resolve the abmbiguity problem when multiple bean are there of same type
@@ -16,13 +17,11 @@ public class SpringConfig {
 
 	@Bean
 	public Employee getRavi() {
-		return new Employee(1,"Ravi");
+		return new Employee(1, "Ravi");
 	}
 	@Bean
 	@Primary
 	public Employee getSudhir() {
 		return new Employee(2,"Sudhir");
-	}
-	
-	
+	}	
 }
